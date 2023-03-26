@@ -7,7 +7,6 @@ M.treesitter = {
 
     "bash",
     "c",
-    "cmake",
     "css",
     "dockerfile",
     "fish",
@@ -40,26 +39,33 @@ M.mason = {
     "lua-language-server",
     "stylua",
 
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "prettier",
-    "tailwindcss-language-server",
-    "typescript-language-server",
-
-    -- go
-    "gopls",
-    "goimports",
-
-    -- utils
+    -- lsps
     "ansible-language-server",
     "bash-language-server",
-    "cmake-language-server",
+    "css-lsp",
     "dockerfile-language-server",
+    "gopls",
+    "html-lsp",
     "json-lsp",
-    "marksman",
     "sqlls",
+    "tailwindcss-language-server",
     "terraform-ls",
+    "typescript-language-server",
+    "yaml-language-server",
+
+    -- linters
+    "ansible-lint",
+    "golangci-lint",
+    "jsonlint",
+    "shellcheck",
+    "tflint",
+    "yamllint",
+
+    -- formatters
+    "goimports",
+    "jq",
+    "prettier",
+    "shfmt",
   },
 }
 

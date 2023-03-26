@@ -4,6 +4,7 @@ if not present then
   return
 end
 
+-- local diagnostics = null_ls.builtins.diagnostics
 local formatting = null_ls.builtins.formatting
 -- local lint = null_ls.builtins.diagnostics
 

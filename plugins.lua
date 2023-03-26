@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -15,6 +15,7 @@ local plugins = {
           require "custom.configs.null-ls"
         end,
       },
+      "b0o/schemastore.nvim",
     },
     config = function()
       require "plugins.configs.lspconfig"
@@ -25,7 +26,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -52,7 +53,6 @@ local plugins = {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
   -- },
-
 }
 
 return plugins
