@@ -16,13 +16,14 @@ local sources = {
   formatting.clang_format,
 
   -- Go
-  formatting.gofmt,   
+  formatting.gofmt,
   formatting.goimports,
 }
 
 null_ls.setup {
   debug = true,
   sources = sources,
+
   on_attach = function()
     vim.api.nvim_create_autocmd("BufWritePost", {
       callback = function()

@@ -4,13 +4,27 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
-    "html",
-    "css",
-    "javascript",
+
+    "bash",
     "c",
+    "cmake",
+    "css",
+    "dockerfile",
+    "fish",
+    "go",
+    "html",
+    "javascript",
+    "jq",
+    "json",
+    "make",
     "markdown",
     "markdown_inline",
-    "go"
+    "php",
+    "sql",
+    "toml",
+    "typescript",
+    "vue",
+    "yaml",
   },
   indent = {
     enable = true,
@@ -27,13 +41,25 @@ M.mason = {
     "stylua",
 
     -- web dev stuff
-    "typescript-language-server",
     "css-lsp",
     "html-lsp",
     "prettier",
+    "tailwindcss-language-server",
+    "typescript-language-server",
 
+    -- go
     "gopls",
-    "goimports"
+    "goimports",
+
+    -- utils
+    "ansible-language-server",
+    "bash-language-server",
+    "cmake-language-server",
+    "dockerfile-language-server",
+    "json-lsp",
+    "marksman",
+    "sqlls",
+    "terraform-ls",
   },
 }
 
