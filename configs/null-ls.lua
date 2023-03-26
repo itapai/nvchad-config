@@ -4,21 +4,30 @@ if not present then
   return
 end
 
-local b = null_ls.builtins
+local formatting = null_ls.builtins.formatting
+-- local lint = null_ls.builtins.diagnostics
 
 local sources = {
 
-  -- webdev stuff
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  formatting.prettier.with {
+    filetypes = { "html", "markdown", "css" },
+  },
+  formatting.stylua,
+  formatting.clang_format,
 
-  -- Lua
-  b.formatting.stylua,
-
-  -- cpp
-  b.formatting.clang_format,
+  -- Go
+  formatting.gofmt,
+  formatting.goimports,
 }
 
 null_ls.setup {
   debug = true,
   sources = sources,
+  on_attach = function()
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        vim.lsp.buf.format()
+      end,
+    })
+  end,
 }
