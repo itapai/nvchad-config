@@ -16,7 +16,7 @@ local sources = {
   formatting.clang_format,
 
   -- Go
-  formatting.gofmt,
+  formatting.gofmt,   
   formatting.goimports,
 }
 
