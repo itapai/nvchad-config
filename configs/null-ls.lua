@@ -4,12 +4,11 @@ if not present then
   return
 end
 
--- local diagnostics = null_ls.builtins.diagnostics
+local diagnostics = null_ls.builtins.diagnostics
 local formatting = null_ls.builtins.formatting
 -- local lint = null_ls.builtins.diagnostics
 
 local sources = {
-
   formatting.prettier.with {
     filetypes = { "html", "markdown", "css" },
   },
@@ -19,10 +18,11 @@ local sources = {
   -- Go
   formatting.gofmt,
   formatting.goimports,
+  -- diagnostics.golangci_lint,
 }
 
 null_ls.setup {
-  debug = true,
+  debug = false,
   sources = sources,
 
   on_attach = function()

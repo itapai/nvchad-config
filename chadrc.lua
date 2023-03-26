@@ -10,6 +10,9 @@ M.ui = {
   }
 }
 
+M.options = {
+}
+
 M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure

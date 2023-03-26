@@ -43,6 +43,7 @@ M.mason = {
     "ansible-language-server",
     "bash-language-server",
     "css-lsp",
+    "diagnostic-languageserver",
     "dockerfile-language-server",
     "gopls",
     "html-lsp",
