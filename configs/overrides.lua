@@ -48,6 +48,7 @@ M.mason = {
     "gopls",
     "html-lsp",
     "json-lsp",
+    -- "spectral-language-server",
     "sqlls",
     "tailwindcss-language-server",
     "terraform-ls",

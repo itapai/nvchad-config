@@ -9,16 +9,25 @@ local formatting = null_ls.builtins.formatting
 -- local lint = null_ls.builtins.diagnostics
 
 local sources = {
+  formatting.fish_indent,
+  formatting.jq,
   formatting.prettier.with {
     filetypes = { "html", "markdown", "css" },
   },
+  formatting.shfmt,
   formatting.stylua,
-  formatting.clang_format,
+  -- formatting.yamlfmt,
 
   -- Go
   formatting.gofmt,
   formatting.goimports,
-  -- diagnostics.golangci_lint,
+
+  diagnostics.ansiblelint,
+  diagnostics.fish,
+  diagnostics.jsonlint,
+  diagnostics.shellcheck,
+  -- diagnostics.spectral,
+  -- diagnostics.yamllint,
 }
 
 null_ls.setup {
