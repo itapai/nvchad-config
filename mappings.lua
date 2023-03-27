@@ -14,6 +14,16 @@ M.general = {
   },
 }
 
+M.disabled = {
+  n = {
+    ["<leader>/"] = false,
+  },
+
+  v = {
+    ["<leader>/"] = false,
+  },
+}
+
 -- more keybinds!
 --
 
