@@ -15,7 +15,6 @@ local sources = {
   formatting.prettier.with {
     filetypes = { "html", "css", "markdown", "yaml", "json", "sql" },
   },
-  formatting.stylua,
   -- formatting.sql_formatter.with {
   --   -- condition = function(utils)
   --   --   return utils.root_has_file "pgconfig.json"
@@ -23,6 +22,7 @@ local sources = {
   --   -- args = { "--language", "sqlite" },
   --   args = { "--language", "postgresql" },
   -- },
+  formatting.stylua,
 
   -- diagnostics.ansiblelint,
   -- diagnostics.fish,
