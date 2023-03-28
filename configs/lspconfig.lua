@@ -8,7 +8,6 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
-  "sqlls",
   "tsserver",
 }
 
@@ -32,7 +31,9 @@ lspconfig.jsonls.setup {
 
   settings = {
     json = {
-      schemas = require("schemastore").json.schemas(),
+      schemastore = {
+        url = "https://www.schemastore.org/api/json/catalog.json",
+      },
     },
   },
 }
@@ -40,10 +41,13 @@ lspconfig.jsonls.setup {
 lspconfig.yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = { "yaml" },
 
   settings = {
     yaml = {
-      schemas = require("schemastore").yaml.schemas(),
+      schemastore = {
+        url = "https://www.schemastore.org/api/json/catalog.json",
+      },
     },
   },
 }

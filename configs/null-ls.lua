@@ -9,31 +9,33 @@ local formatting = null_ls.builtins.formatting
 -- local lint = null_ls.builtins.diagnostics
 
 local sources = {
-  formatting.fish_indent,
-  formatting.jq,
-  formatting.prettier.with {
-    filetypes = { "html", "markdown", "css" },
-  },
-  formatting.shfmt,
-  formatting.stylua,
-  -- formatting.yamlfmt,
-
-  -- Go
   formatting.gofmt,
   formatting.goimports,
+  formatting.jq,
+  formatting.prettier.with {
+    filetypes = { "html", "css", "markdown", "yaml", "json" },
+  },
+  formatting.stylua,
+  formatting.sql_formatter.with {
+    -- condition = function(utils)
+    --   return utils.root_has_file "pgconfig.json"
+    -- end,
+    -- args = { "--language", "sqlite" },
+    args = { "--language", "postgresql" },
+  },
 
-  diagnostics.ansiblelint,
-  diagnostics.fish,
-  diagnostics.jsonlint,
-  diagnostics.shellcheck,
+  -- diagnostics.ansiblelint,
+  -- diagnostics.fish,
+  -- diagnostics.jsonlint,
+  -- diagnostics.shellcheck,
   -- diagnostics.spectral,
-  -- diagnostics.yamllint,
+  diagnostics.yamllint,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup {
-  debug = false,
+  -- debug = true,
   sources = sources,
 
   on_attach = function(client, bufnr)

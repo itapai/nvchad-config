@@ -17,7 +17,6 @@ M.treesitter = {
     "json",
     "make",
     "markdown",
-    "markdown_inline",
     "php",
     "sql",
     "toml",
@@ -35,38 +34,29 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
-
-    -- lsps
-    "ansible-language-server",
+    -- language servers
+    -- "ansible-language-server",
     "bash-language-server",
     "css-lsp",
-    "dockerfile-language-server",
+    -- "dockerfile-language-server",
     "gopls",
     "html-lsp",
     "json-lsp",
+    "lua-language-server",
+    -- "marksman",
     -- "spectral-language-server",
-    "sqlls",
-    "tailwindcss-language-server",
-    "terraform-ls",
+    -- "sqlls",
     "typescript-language-server",
     "yaml-language-server",
 
     -- linters
-    "ansible-lint",
     "golangci-lint",
-    "jsonlint",
-    "shellcheck",
-    "tflint",
-    "yamllint",
 
     -- formatters
     "goimports",
-    "jq",
     "prettier",
-    "shfmt",
+    "sql-formatter",
+    "stylua",
   },
 }
 
