@@ -13,16 +13,16 @@ local sources = {
   formatting.goimports,
   formatting.jq,
   formatting.prettier.with {
-    filetypes = { "html", "css", "markdown", "yaml", "json" },
+    filetypes = { "html", "css", "markdown", "yaml", "json", "sql" },
   },
   formatting.stylua,
-  formatting.sql_formatter.with {
-    -- condition = function(utils)
-    --   return utils.root_has_file "pgconfig.json"
-    -- end,
-    -- args = { "--language", "sqlite" },
-    args = { "--language", "postgresql" },
-  },
+  -- formatting.sql_formatter.with {
+  --   -- condition = function(utils)
+  --   --   return utils.root_has_file "pgconfig.json"
+  --   -- end,
+  --   -- args = { "--language", "sqlite" },
+  --   args = { "--language", "postgresql" },
+  -- },
 
   -- diagnostics.ansiblelint,
   -- diagnostics.fish,
