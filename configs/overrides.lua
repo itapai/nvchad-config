@@ -35,7 +35,7 @@ M.treesitter = {
 M.mason = {
   ensure_installed = {
     -- language servers
-    -- "ansible-language-server",
+    "ansible-language-server",
     "bash-language-server",
     "css-lsp",
     -- "dockerfile-language-server",
@@ -50,6 +50,7 @@ M.mason = {
     "yaml-language-server",
 
     -- linters
+    "ansible-lint",
     "golangci-lint",
 
     -- formatters

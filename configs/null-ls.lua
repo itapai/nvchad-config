@@ -6,7 +6,6 @@ end
 
 local diagnostics = null_ls.builtins.diagnostics
 local formatting = null_ls.builtins.formatting
--- local lint = null_ls.builtins.diagnostics
 
 local sources = {
   formatting.gofmt,
@@ -24,7 +23,7 @@ local sources = {
   -- },
   formatting.stylua,
 
-  -- diagnostics.ansiblelint,
+  diagnostics.ansiblelint,
   -- diagnostics.fish,
   -- diagnostics.jsonlint,
   -- diagnostics.shellcheck,

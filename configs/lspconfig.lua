@@ -6,6 +6,7 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then add them here
 local servers = {
+  "ansiblels",
   "html",
   "cssls",
   "tsserver",
