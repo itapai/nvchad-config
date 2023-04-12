@@ -2,8 +2,8 @@
 local M = {}
 
 M.ui = {
-  theme = "bearded-arc",
-  theme_toggle = { "bearded-arc", "blossom_light" },
+  theme = "decay",
+  theme_toggle = { "decay", "blossom_light" },
 
   statusline = {
     separator_style = "block",

@@ -1,14 +1,18 @@
 local autocmd = vim.api.nvim_create_autocmd
 
--- Auto resize panes when resizing nvim window
+-- auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
 
+-- disable automatic newline continuation of comments
 autocmd("FileType", {
   pattern = "*",
-  command = [[set fo-=c fo-=r fo-=o]],
+  callback = function()
+    vim.opt.formatoptions:remove { "c", "r", "o" }
+  end,
+  desc = "Disable New Line Comment",
 })
 
 -- code folding settings
